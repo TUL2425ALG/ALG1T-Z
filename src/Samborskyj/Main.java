@@ -1,9 +1,11 @@
-package school;
+package Samborskyj;
 
+/**
+ *
+ * @author Samborskyj-N-daef
+ */
 public class Main {
-
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
-    
 }
