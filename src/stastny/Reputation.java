@@ -5,13 +5,12 @@ import java.util.Scanner;
 /**
  * Zápočtová prace
  * Hodnoceni uzivatelu na platforme
- * @author Stastny
+ * @author Patrik Stastny
  * @version 1.0 12/12/2024
  */
 public class Reputation {
 
     public static void main(String[] args) {
-        // 
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Zadejte pocet uzivatelu: ");

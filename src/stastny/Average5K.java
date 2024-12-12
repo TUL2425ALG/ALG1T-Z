@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Zápočtová prace Vypocita z 5km behu prumer pro 1km
  * nejpomalejsi a nejrychlejsi cas se nebere
- * @author Stastny
+ * @author Patrik Stastny
  * @version 1.0 12/12/2024
  */
 public class Average5K {
