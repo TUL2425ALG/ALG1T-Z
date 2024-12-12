@@ -48,7 +48,7 @@ public class Average5K {
                 }
                 totaltime = totaltime + times[i];
             }
-
+            
             avg = (totaltime - mintime - maxtime) / ((runs - 2) * DISTANCE);
             System.out.print("Pouzite hodnoty pro vypocet:\n{");
             for (int i = 0; i < times.length; i++) {
