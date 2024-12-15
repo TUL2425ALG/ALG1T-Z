@@ -67,7 +67,7 @@ public class Average5K {
                     sumPole = sumPole + casy[i];
                 }
 
-                if(i != casy.length-1)
+                if(i != casy.length-1) //JV netestovat v kazdem kroku cyklu, dat posledni cas mimo for
                 {
                     System.out.print(",");
                 }
@@ -77,7 +77,7 @@ public class Average5K {
 
             //vypocet prumeru
             prumer = (sumPole/TRASA)/(casy.length-2);
-            System.out.format("Průměrně jste 1 km ubehl za %.2f min.\n",prumer); //vypisuje se s , a nevim proc
+            System.out.format("Průměrně jste 1 km ubehl za %.2f min.\n",prumer); //vypisuje se s , a nevim proc //JV Asi byl vypis lokalizovany do cestiny , me vypisuje tecku
             
             System.out.println("Zadejte počet běhů:");
             pocetBehu = sc.nextInt();

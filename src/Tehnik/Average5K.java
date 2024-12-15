@@ -41,7 +41,7 @@ public class Average5K {
         return arr;
     }
     
-    public static void PrintArr (double[] arr)
+    public static void PrintArr (double[] arr) //JV nevypisuje podle zadani
     {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
@@ -52,6 +52,7 @@ public class Average5K {
     {
         double max = arr[0];
         double min_val = Double.MIN_VALUE; // INTEGER.MINVAL
+        //JV je to trochu zmatek, jestli pocitate minimum nebo maximum, melo by to byt  int max = Double.MIN_VALUE; - nejmensi kladne cislo
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > min_val)
             {   
@@ -88,7 +89,7 @@ public class Average5K {
         double avg = 0;
         
         for (int i = 0; i < arr.length; i++) {
-            
+            //JV chybi vypocet sumy
         }
         sum = sum - max_km - min_km; 
         avg = sum/((double)arr.length-2);

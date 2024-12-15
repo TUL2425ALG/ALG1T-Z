@@ -30,7 +30,8 @@ public class Reputation {
             }
         }
         System.out.println("Zarovnaný výpis:");
-
+        //JV snazte se oddelovat logiku od vypisu
+        //JV zde bych jenom zarovnane vypisovala
         for (int i = 0; i < pocetUzivatelu; i++) {
             for (int j = 0; j < pocetUzivatelu; j++) {
                 System.out.format("%s %d ", ((hodnoticiMatice[i][j] >= 0) ? " " : ""), hodnoticiMatice[i][j]);
@@ -39,7 +40,8 @@ public class Reputation {
             }
             System.out.println("");
         }
-
+        //JV zde bych prochazela matici, pocitala sumu reputaci a po skonceni vnitrniho for prumernou reputaci a tu si ukladala
+        //JV zde bych pak jenom vypisovala prumerne reputace
         System.out.println("Průměrné reputace:");
         for (int i = 0; i < pocetUzivatelu; i++) {
             System.out.format("Uživatel %d: %.2f \n", (i + 1), (reputaceUzivatelu[i] / (double) (pocetUzivatelu - 1)));
@@ -63,7 +65,7 @@ public class Reputation {
         System.out.format("Platforma %s pozitivní \n", (JePozitivni(hodnoticiMatice) ? "je" : "není"));
 
     }
-
+    //JV konvence v Jave - metody zacinaji malym pismenem
     private static boolean JePozitivni(int[][] hodnoticiMatice) {
         boolean pozitivniUzivatel = false;
         for (int i = 0; i < hodnoticiMatice.length; i++) {

@@ -14,7 +14,7 @@ public class Reputation {
         System.out.println("Zadejte počet uživatelů:");
         int pocetUziv = sc.nextInt();
         
-        int[] hodnoceni = new int[pocetUziv*pocetUziv];
+        int[] hodnoceni = new int[pocetUziv*pocetUziv]; //JV je nejaky konkretni duvod, proc jste zvolil jednorozmerne pole, zbytecne tezko by se Vam zistovali napr pratelske dvojice
         double[] prumery = new double[pocetUziv];
         int sum = 0;
         int index = 0;
@@ -68,7 +68,7 @@ public class Reputation {
         for (int i = 0; i < a.length; i += pocetUziv) {
             abs = 0;
             for (int j = i; j < i+pocetUziv ; j++) {
-                abs = abs + Math.abs(a[j]);
+                abs = abs + Math.abs(a[j]); //JV proc jste pocital absolutni hodnoty 3, 5 je rozdil 2 a -3 5 je rozdil 8
             }
             
             if(abs > absMax)
@@ -86,4 +86,7 @@ public class Reputation {
         
         return vysledek;
     }
+    
+    //JV chybi pratelske dvojice
+    //JV chybi pozitivita
 }

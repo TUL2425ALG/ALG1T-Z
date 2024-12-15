@@ -62,7 +62,7 @@ public class Reputation {
         for (int i = 0; i < arr.length; i++) {
             int sum = 0;
             for (int j = 0; j < arr.length; j++) {
-                if (i != j){
+                if (i != j){ //JV ani nebylo potreba testovat +0 neovlyvni sumu
                     sum += arr[i][j];
                 }
             }
@@ -75,7 +75,7 @@ public class Reputation {
     
     public static void ControverseUser (int[] arr)
     {
-        int max = arr[0];
+        int max = arr[0]; //JV i tady by to melo byt v abs hodnote
         int uzivatel = 0;
         for (int i = 0; i < arr.length; i++) {
             if (Math.abs(arr[i]) > max)
@@ -98,7 +98,7 @@ public class Reputation {
             int min = 0;
             int max = 1000;
             for (int j = 0; j < arr.length; j++) {
-                if (arr[i][j] > min)
+                if (arr[i][j] > min) //JV opet to nedava smysl, kdyz je vetsi, dej ho do min
                 {
                     min = arr[i][j];
                 }
@@ -121,6 +121,7 @@ public class Reputation {
         }
     }
     
+    //JV nedokoncene
     public static boolean IsPlatformPositive(int[][] arr)
     {
         boolean status = false;
@@ -138,4 +139,6 @@ public class Reputation {
         
         return status;
     }
+    
+    //chybi pratelske dvojice
 }

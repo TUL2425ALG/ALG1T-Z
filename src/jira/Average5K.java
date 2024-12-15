@@ -20,7 +20,7 @@ public class Average5K {
         System.out.println("Zadejte počet běhů:");
 
         int pocetBehu = 0;
-        double[] casyBehu = new double[0];
+        double[] casyBehu = new double[0]; //JV zbytecne tady nealokujte pamet pro nulove pole, staci zde deklarovat promennou
         double casBehu = 0;
         double prumernaRychlost = 0;
         double sumaBehu = 0;
@@ -48,6 +48,12 @@ public class Average5K {
             System.out.println("Použité hodnoty pro výpočet:");
             System.out.print("{");
             double[] casyBehuProVypocet = new double[pocetBehu - 2]; 
+            
+            //JV v tomto foru se micha logika a vypis 
+            //JV kombinujete sekvencni zpracovani, kdy si hodnoty neukladame a hned zpracovavame (vid. uloha Kasa)
+            //JV a praci s polem, kdy si hodnoty ukladame a az nasledne zpracovavame.
+            //JV Ve for bych vyplnila pole casyBehuProVypocet a pripadne pocitala sumBehu
+            //JV V novem for bych pak prochazela pole casyBehuProVypocet a vypisovala
             for (int i = 0, j = 0; i < casyBehuProVypocet.length; i++, j++) {
                 if (j == krajniIndexy[0] || j == krajniIndexy[1]) {
                     j++;

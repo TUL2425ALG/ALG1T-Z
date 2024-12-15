@@ -24,7 +24,7 @@ public class Average5K {
         System.out.println("Zadejte počet běhů");
         while ((pocet_behu = sc.nextInt()) > 0) {
             System.out.println("Zadejte časy běhů");
-            behy_nej = new double[2];
+            behy_nej = new double[2]; //JV kdyz jen 2 hodnoty, citelnejsi je mit 2 promenne minCas, maxCas
             cas_behu = new double[pocet_behu];
             cas_behu[0] = sc.nextDouble();
             behy_nej[0] = cas_behu[0];
@@ -40,9 +40,9 @@ public class Average5K {
             System.out.println("Použité hodnoty pro výpočet:");
             System.out.print("{ ");
             for (int i = 0; i < cas_behu.length; i++) {
-                if (cas_behu[i] != behy_nej[0] && cas_behu[i] != behy_nej[1]) {
-                    prumerny_cas += (double) cas_behu[i] / DELKA_TRASY;
-                    System.out.print(cas_behu[i] + ", ");
+                if (cas_behu[i] != behy_nej[0] && cas_behu[i] != behy_nej[1]) { //JV jen se zamyslet, jak se to bude chovat, kdyz bude vic minimalnich casu
+                    prumerny_cas += (double) cas_behu[i] / DELKA_TRASY; 
+                    System.out.print(cas_behu[i] + ", "); //JV i za poslednim prvkem vypise carku a mezeru, to jsme nechteli
                 }
             }
 

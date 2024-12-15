@@ -54,7 +54,7 @@ public class Average5K {
                 continue;
             } else {
                 sum = sum + cas[c];
-                // Just shitty formatting
+                // Just shitty formatting //JV trochu nedotiahnute - Skuste si test 10 20.3 28.4 22.6 21.8 24.5 21.8 22.5 23.9 22.9 21.5
                 if (c == 0 || skip == 1) { // First or first was skipped
                     System.out.print("{"+cas[c]);
                 } else {

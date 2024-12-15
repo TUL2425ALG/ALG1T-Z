@@ -16,6 +16,7 @@ public class Reputation {
      * CLASS ENTRY POINT
      */
     public static void run() {
+        //JV nazvy Vasich promennych su zkratky, zhorsuje to citelnost Vaseho kodu 
         
         // Create matrix
         System.out.print("Zadejte počet uživatelů:\r\n");
@@ -44,7 +45,7 @@ public class Reputation {
         for (int u = 0; u < ucnt; u++) {
             // Rank of one user
             for (int pos = 0; pos < ucnt; pos++) {
-                sum = sum + (float)rank[u][pos];
+                sum = sum + (float)rank[u][pos]; //JV sum by mela byt int, pretypovat by to chtelo az, kdyz potrebuju pocitat prumer 
             }
             System.out.print(String.format("Uživatel %d: %.2f\r\n", (u + 1), (sum/(ucnt-1)))); // average -> sum / user count without currently processed user
             sum = 0;
@@ -58,7 +59,7 @@ public class Reputation {
         System.out.print("Přátelské dvojice:\r\n");
         for (int u1 = 0; u1 < ucnt; u1++) {
             for (int u2 = 0; u2 < ucnt; u2++) {
-                if (rank[u1][u2] > 0 && rank[u2][u1] > 0 && u1 < u2) { // u1 < u2 : This is so dumb.
+                if (rank[u1][u2] > 0 && rank[u2][u1] > 0 && u1 < u2) { // u1 < u2 : This is so dumb. //JV mne to pride clever
                     System.out.print((u1+1)+", "+(u2+1)+"\r\n");
                 }
             }
@@ -67,7 +68,7 @@ public class Reputation {
         // Platform mood
         if (isPositive(rank, ucnt)) {
             System.out.print("Platforma je positivní.\r\n");
-        }
+        } //JV kdyz neni, nic to nevypise - pro negativni to vypada, ze nic nezistuje
     }
     
     /**
@@ -90,7 +91,7 @@ public class Reputation {
             }
         }
         // All users have at least one rank > 0
-        return(true);
+        return(true); //JV tato metoda vrati true, kdyz alespon jeden uzivatel ma alespon jedno pozitivni hodnocení Zkuste 3 0 3 -5 2 0 4 -3 -5 0, kde treti nema pozitivni hodnoceni
     }
     
     /**
@@ -110,7 +111,7 @@ public class Reputation {
                 if (data[i][val] > max) {
                     max = data[i][val];
                 }
-                if (data[i][val] < min) {
+                if (data[i][val] < min) { //JV co, kdyz min je kladné? Zároveň 0 nechceme vubec zahrnovat Zkuste si 3 0 3 5 2 0 4 3 5 0, kde rozdil by mel byt 2  
                     min = data[i][val];
                 }
             }
@@ -128,7 +129,7 @@ public class Reputation {
         return db.elementAt(idx);
     }
     // Holder for user when estimating biggest difference.
-    private static class con {
+    private static class con { //JV tridy v jave zacinaji velkymi pismeny, aby se dobre odlisili od promennych
         int id = -1;
         float diff = 0;
     }
