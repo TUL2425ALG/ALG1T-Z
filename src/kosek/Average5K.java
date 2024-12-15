@@ -52,7 +52,7 @@ public class Average5K {
                 }
                 newTimes[i] = times[i];
             }
-            times = null;
+            times = null; //JV to ani netrebalo, drzi to puvodni zadane data
 
             System.out.print("{");
             for (int i = 0; i < n; i++) {
