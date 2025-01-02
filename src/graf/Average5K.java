@@ -31,7 +31,7 @@ public class Average5K {
                 }
              
                 //processing
-                double avg1KmTime = averageValueInArrayNoMaxMin(times)/5;
+                double avg1KmTime = averageValueInArrayNoMaxMin(times)/5; //JV 5 jako konstantu
              
                 //output
                 System.out.println("Použité hodnoty pro výpočet:");
@@ -47,8 +47,8 @@ public class Average5K {
          String output="{";
          for(int i = 0;i<a.length;i++){
             output+=a[i];
-            if(i<a.length-1){
-                output+=", ";
+            if(i<a.length-1){ //JV idealne posledni prvek mimo for, abyste nemuseli porad testovat, jestli uz jste na predposlednim prvku
+                output+=", "; //JV vypise i hodnoty, ktere se do vypoctu nepouziji
             }
          }
          return output+"}";

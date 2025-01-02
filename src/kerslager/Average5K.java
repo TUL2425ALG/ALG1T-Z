@@ -25,7 +25,7 @@ public class Average5K {
             } else{
                 double[] casy = casyInput(cnt);
                 output(casy);
-                System.out.println("Zadejte počet běhů:");
+                System.out.println("Zadejte počet běhů:"); //JV tohle by melo byt mimo else, v obou p[ripadech se chcete zeptat
             }
             cnt = sc.nextInt();
         }
@@ -51,7 +51,7 @@ public class Average5K {
         int maxIdx = 0;
         for(int i = 0; i < casy.length; i++){
             if(casy[i] > max){
-                maxIdx = i;
+                maxIdx = i;,.
                 max = casy[i];
             }
             if(casy[i] < min){
@@ -73,14 +73,14 @@ public class Average5K {
         }
         System.out.println("}");
         */
-        Arrays.sort(casy);
+        Arrays.sort(casy); //JV vseobecne je overkill tridit, abychom ziskali max a min
         //{cas1, cas2, ...}
         System.out.println("Použité hodnoty pro výpočet");
         System.out.print("{");
         boolean first = true;
         for(int i = 1; i < (casy.length-1); i++){
             if(!first){
-                System.out.print(", ");
+                System.out.print(", "); //JV prvni vypsat mimo for
             }
             System.out.format("%.1f", casy[i]);
             first = false;
@@ -114,7 +114,7 @@ public class Average5K {
         }
         */
         double[] fil = casy.clone();
-        Arrays.sort(fil);
+        Arrays.sort(fil); //JV jinak organizovat, aby se v kodu @x nemuselo pocitat max a min, nebo tridit
         double sum = 0;
         for(int i = 1; i < (fil.length - 1); i++){
             sum += fil[i];

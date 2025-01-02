@@ -26,7 +26,7 @@ public class Average5k {
             suma = suma + a[i];
         }
         
-        System.out.println("Pouzite hodnoty");
+        System.out.println("Pouzite hodnoty"); //JV pouzite mely byt hodnoty bez min a max 
         System.out.print("{");
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + (i == a.length-1?"":","));

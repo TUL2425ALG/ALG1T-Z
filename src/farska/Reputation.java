@@ -48,7 +48,7 @@ public class Reputation {
         double prumer = 0;
         for (int i = 0; i < matrix.length; i++) {    
             for (int j = 0; j < matrix.length; j++) {
-                prumer = (prumer + matrix[i][j]) / (pocetUziv - 1);
+                prumer = (prumer + matrix[i][j]) / (pocetUziv - 1); //JV delit pocet uzivatelu az po konci for (az celkovou sumu) 
 
             }
             System.out.println("Uzivatel " + (i+1) + ": " + prumer);

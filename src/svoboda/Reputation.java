@@ -25,7 +25,7 @@ public class Reputation {
         System.out.println("Zarovnaný výpis:");
         for(int i = 0 ; i < pocet; i++){
             for(int k = 0; k < pocet; k++){
-                System.out.print(hodnot[i][k] + " ");
+                System.out.print(hodnot[i][k] + " "); //JV lepsi pres format napr. %3d, aby se brala v potaz i znamenka 
             }
             System.out.println();
         
@@ -41,7 +41,7 @@ public class Reputation {
         }
           
           System.out.println("Nejvíce kontroverzní uživatel je " + kontroverzni(hodnot)[1] + ". Má rozdíl " + kontroverzni(hodnot)[0]);
-          if(pozitivni(hodnot) == true){
+          if(pozitivni(hodnot) == true){ //JV staci if(pozitivni(hodnot))
               System.out.println("Platforma je pozitivni ");
           }else{
               System.out.println("Platforma není pozitivni ");
@@ -79,6 +79,7 @@ public class Reputation {
                 
                 
             }
+            //JV rozdil = nejl - nejh, nevadi, ze to muzou byt zaporne hodnoty - 3 - (-5) = 2 
             int l = Math.abs(nejl);
             int h = Math.abs(nejh);
             kon[i] = h + l;
@@ -134,7 +135,7 @@ public class Reputation {
             }
              pozitiv = false;
         }
-        if (c == pole.length){
+        if (c == pole.length){ //JV staci return c == pole.length
             return true;
         }else{
             return false;

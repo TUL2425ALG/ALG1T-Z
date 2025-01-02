@@ -15,7 +15,7 @@ public class Reputation {
         Scanner sc = new Scanner(System.in);
         System.out.println("Zadejte pocet uzivatelu: ");
         int uzivatele = sc.nextInt();
-        for (int i = 0; i < uzivatele + 1; i++) {
+        for (int i = 0; i < uzivatele + 1; i++) { //JV je potreba vytvorit 2D pole, abyste mohli ukladat data
             System.out.println("Zadejte hodnotici matici: ");
             int hodnoticimatice = sc.nextInt();
             int zarovnanyvypis = 0;

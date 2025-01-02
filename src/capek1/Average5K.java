@@ -22,7 +22,7 @@ public class Average5K {
 
             int iMin = hledejiMin(casy);
             int iMax = hledejiMax(casy);
-            for (int i = 0; i < casy.length; i++) {
+            for (int i = 0; i < casy.length; i++) { //JV zbytecny for casy[iMin] = 0, casy[iMax] = 0
                 if(i == iMin || i == iMax){
                     casy[i] = 0;
                 }

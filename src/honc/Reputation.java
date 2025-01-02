@@ -44,7 +44,7 @@ public class Reputation {
         
         kontroverzni(A);
         
-        System.out.println("Pratelske dvojice:");
+        System.out.println("Pratelske dvojice:"); //JV prochazet jen cast matice napr. pod diagonalou, aby se nezobrazilo 1,2 a 2,1
         for (int i = 0; i < A.length; i++) {
             for (int j = A.length-1; j > 0; j--) {
                 if(A[i][j] > 0 && A[j][i] > 0){

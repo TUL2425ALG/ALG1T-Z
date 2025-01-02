@@ -20,7 +20,7 @@ public class Average5K {
 
             System.out.println("Zadejte cas behu: ");
             int cas = sc.nextInt();
-            int[] times = new int[cas];
+            int[] times = new int[cas]; //JV stacilo do pocetbehu ukladat jednotlive casy
 
             System.out.println("Pouzite hodnoty pro vypocet:");
             //System.out.println(int[n][cas]);
@@ -35,7 +35,7 @@ public class Average5K {
 
     public static void vypocitej(int n, int[] pocetbehu, int[] times) {
         int vzdalenost5km = 5000;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { //JV pro ziskani nejrychlejsiho neni potreba tridit pole
             for (int j = 0; j < i + 1; j++) {
                 if (times[i] < times[j + 1]) {
                     times[i] = times[j + 1];

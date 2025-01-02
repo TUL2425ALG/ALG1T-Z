@@ -74,7 +74,7 @@ public class Reputation {
         } 
     }
     
-    public static int[] AverangeReputation(int[][] rateMatrix, int userCount)
+    public static int[] AverangeReputation(int[][] rateMatrix, int userCount) //JV nedavejte zbytecne userCount, zjistete ho, ze zadane matice 
     {
         int[] reputations = new int[userCount];
                   
@@ -83,7 +83,7 @@ public class Reputation {
             for (int j = 0; j < rateMatrix[i].length; j++) {
                 rowSum += rateMatrix[i][j];
             }
-            reputations[i] = rowSum / (userCount -1);
+            reputations[i] = rowSum / (userCount -1); //JV pri deleni integru dostanete celociselne deleni 
         }        
         return reputations;
     }
@@ -95,8 +95,8 @@ public class Reputation {
         int[] mostControversional = new int[2];
         
         for (int i = 0; i < rateMatrix.length; i++) {
-             int maxRate = Integer.MAX_VALUE;
-             int minRate = Integer.MIN_VALUE;
+             int maxRate = Integer.MAX_VALUE; //JV maxRate by melo byt na zacatku co nejmensi, aby hned prvni hodnoceni bylo vetsi a prepsalo ho
+             int minRate = Integer.MIN_VALUE; //JV zde zase opak
             for (int j = 0; j < rateMatrix[i].length; j++) {
                 if(minRate <= rateMatrix[i][j])
                 {
@@ -107,6 +107,7 @@ public class Reputation {
                     maxRate = rateMatrix[i][j];
                 }
             }
+            //JV stacilo max - min
             if(minRate < 0)
             {
                 Math.abs(minRate);

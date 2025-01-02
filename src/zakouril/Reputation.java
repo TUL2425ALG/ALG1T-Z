@@ -62,7 +62,7 @@ public class Reputation {
         System.out.println(" ");
         System.out.println("Přátelské dvojice: ");
         //je potreba je delat prohozenim i a j - tenhle pattern je uplne vsude
-        for (int i = 0; i < hodnoceni.length; i++) {
+        for (int i = 0; i < hodnoceni.length; i++) { //JV stacilo by prochazet jen treba spodní cast matice pod diagonalou, aby se nevypisovalo 1 2 a 2 1
             for (int j = 0; j < hodnoceni[0].length; j++) {
                 if (hodnoceni[i][j] > 0 && hodnoceni[j][i] > 0) {
                     System.out.format("Dvojice: %d a %d jsou kamarádi %n", (i+1),(j+1));

@@ -60,7 +60,7 @@ public class Reputation {
      public static void printIntMatrix(int[][] a ){
         for(int i = 0;i<a.length;i++){
             for(int j = 0;j<a[i].length;j++){
-                System.out.print( ((a[i][j]<0)?"":" ") + a[i][j] + " ");
+                System.out.print( ((a[i][j]<0)?"":" ") + a[i][j] + " "); //JV vhodne pouzit format
             }
             System.out.print("\n");
         }
@@ -96,9 +96,9 @@ public class Reputation {
      public static Boolean isPlatformPositive (int[][] a)
      {
      for(int i = 0;i<a.length;i++){
-        Boolean hasPositive = false;
+        Boolean hasPositive = false; //JV deklarovat promennou mimo cyklus, staci boolean
         for(int j = 0;j<a.length;j++){
-            if(a[i][j]>0 && i!=j){
+            if(a[i][j]>0 && i!=j){ //JV asi neni potreba testovat i != j, protoze to bude vzdy 0 
                 hasPositive=true;
                 break; // user has positive review, we can go to the next user (i+1) [not strictly needed, but avoids running the rest of the loop for no reason ]
             }

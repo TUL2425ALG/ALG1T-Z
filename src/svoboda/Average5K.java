@@ -26,7 +26,7 @@ public class Average5K {
             if(pocet <= 0){
                 break;
             }
-            double [][] cas = new double[pocet][1];
+            double [][] cas = new double[pocet][1]; //JV 2D pole o 1 sloupci - znamena, ze stacilo 1D pole
             System.out.println("Zadej časy běhů:");
             for(int i = 0; i < pocet;i++){
                 
@@ -35,7 +35,7 @@ public class Average5K {
                 if(nejpomal == -1 || cas[i][0] > nejpomal){
                     nejpomal = cas[i][0];
                     cislo1 = i;
-                }else if(nejrych == -1 || cas[i][0] < nejrych){
+                }else if(nejrych == -1 || cas[i][0] < nejrych){ 
                     nejrych = cas[i][0];
                     cislo2 = i;
                 }
@@ -49,10 +49,10 @@ public class Average5K {
             System.out.print("{");
             for(int i = 0; i < celkemCas.length; i++){
                 
-                if(celkemCas[i] <= 0){
+                if(celkemCas[i] <= 0){ //JV delat jen if (celkemCas[i] > 0)
                      
                 }else{
-                    System.out.print(Double.toString(celkemCas[i]) + " ");
+                    System.out.print(Double.toString(celkemCas[i]) + " "); //JV v sout neni potreba pretypovavat double na String, dela si to automaticky
                     soucet += celkemCas[i];
                 }
                 

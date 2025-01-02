@@ -52,13 +52,14 @@ public class Reputation {
         }
     }
     
+    //JV metoda pouzita na strukturovani kodu, ale lepsi by bylo m9t metodu, ktera vrati pole se vsemi prumery  
     static void avgRep(int[][] mat){
         //0 3 -5 2 0 4 -3 5 0
         int sum = 0;
         for(int i = 0; i < mat.length; i++){
             sum = 0;
             for(int j = 0; j < mat.length; j++){
-                if(i != j){
+                if(i != j){ //JV ani nebylo potreba testovat +0 nezmeni vysledek
                     sum += mat[i][j];
                 }
             }
@@ -71,7 +72,7 @@ public class Reputation {
         int biggestDiff = Integer.MIN_VALUE;
         int mostCon = 0;
         for(int i = 0; i < mat.length; i++){
-            int min = Integer.MAX_VALUE;
+            int min = Integer.MAX_VALUE; //JV vhodne deklarovat promenne mimo cyklus
             int max = Integer.MIN_VALUE;
             for(int j = 0; j < mat.length; j++){
                 if(i != j){
@@ -106,7 +107,7 @@ public class Reputation {
         for(int i = 0; i < mat.length; i++){
             boolean hasPositive = false;
             for(int j = 0; j < mat.length; j++){
-                if((i != j) && (mat[i][j] > 0)){
+                if((i != j) && (mat[i][j] > 0)){ //JV ani neni potreba testovat i!=j
                     hasPositive = true;
                 }
             }

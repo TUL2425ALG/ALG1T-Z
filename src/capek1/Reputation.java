@@ -33,7 +33,7 @@ public class Reputation {
         for (int i = 0; i < n; i++) {
             System.out.println("");
             for (int j = 0; j < n; j++) {
-                System.out.print(matice[i][j] + " ");
+                System.out.print(matice[i][j] + " "); //JV lepsi pouzit format %3d
             }
         }
         System.out.println("");
@@ -78,7 +78,7 @@ public class Reputation {
     }
     
     private static int hledejiMax(int[] a) {
-        int max = 0;
+        int max = 0; //JV pokud by max bylo zaporny, tak to nenajde 
         int iMax = -1;
         for (int i = 0; i < a.length; i++) {
             if (a[i] > max){

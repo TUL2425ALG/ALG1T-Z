@@ -39,7 +39,7 @@ public class Average5K {
     public static void vypoctiPrumer(double[] casyBehu){
         int fastestId = 0; 
         int slowestId = 0; 
-        double fastestTime = 100000; // max int, ale nevim syntaxi
+        double fastestTime = 100000; // max int, ale nevim syntaxi //JV Integer.MAX_VALUE
         double slowestTime = 0;
         double soucetPrumeru = 0;
         //projedu forem a u kazdeho behu vydelim 5 abych ziskal prumer na km, do celkoveho vypoctu ale nebudu davat id slowest a fastest a vsechny je sectu a potom vydelim array length - 2 
@@ -54,8 +54,8 @@ public class Average5K {
             }
         }
         for (int i = 0; i < casyBehu.length; i++) {
-            if (i != slowestId && i != fastestId) {
-                soucetPrumeru += (casyBehu[i] / CELKOVA_VZDALENOST);
+            if (i != slowestId && i != fastestId) { //JV bylo by optimalnejsi secíst vsechny casy a pak odecist 2 casy 
+                soucetPrumeru += (casyBehu[i] / CELKOVA_VZDALENOST); //JV tady taky by stačilo delit jenom jednou na zaver
             }
         }
         
@@ -65,7 +65,7 @@ public class Average5K {
             for (int i = 0; i < casyBehu.length; i++) {
                 if (i != slowestId && i != fastestId) { 
                 System.out.print(casyBehu[i] + ","); //mohl jsem udelat podminku ktera by vzdy kontrolovala jestli to nahodou neni posledni prvek, a u nej nevypisovat carku, ale potom by to nebylo vubec optimalizovane
-                }
+                } //JV posledni prvek by jste idealne mohl vypisovat mimo for
             }
             System.out.format("} %n");
         
@@ -77,4 +77,6 @@ public class Average5K {
         
         //vytvoreni pole ktere vratime: bude ve formatu: id_slowest, id_fastest,  tak, abych vedel ktere casy se nepouzili plus aby mi vratil prumerny cas
     }
+    
+    //JV co se tyka struktury, byla by zajimava metoda, ktere byste dal pole a ona vratila prumer 
 }

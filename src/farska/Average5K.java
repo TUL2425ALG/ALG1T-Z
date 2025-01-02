@@ -31,7 +31,7 @@ public class Average5K {
             vypisHodnoty(casy);
             double[] casProKm  = casPro1Km(casy);
             //System.out.println(Arrays.toString(prumer(casy)));
-            double[] sorted = sort(casProKm);
+            double[] sorted = sort(casProKm); //JV velice neefektivni tridit, abychom dostali min a max
             double prumer = prumer(sorted);
             System.out.format("Prumerne jste 1km bezela za %.2f min\n", prumer);
             
@@ -53,7 +53,7 @@ public class Average5K {
         for (int i = 0; i < casy.length; i++) {
             if (casy[i] != casy[casy.length - 1]) {
                 System.out.print(casy[i] + ", ");
-            }else if (casy[i] == casy[casy.length - 1]){
+            }else if (casy[i] == casy[casy.length - 1]){ //JV nekontrolovat porad, jestli je to posledni cas, dat mimo for
                 System.out.print(casy[i] + "} \n");
             }
         }
