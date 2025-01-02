@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Mahdal;
+package mahdal;
 
 import static java.lang.Double.MAX_VALUE;
 import java.util.Scanner;
@@ -53,7 +53,7 @@ public class Average5K {
             System.out.print("Pouzite hodnoty pro vypocet:\n{");
             for (int i = 0; i < times.length; i++) {
                 if (times[i] != maxtime && times[i] != mintime) {
-                    if (i == times.length - 1) {
+                    if (i == times.length - 1) { //JV idealne vypisovat mimo for, netestovat v kazde iteraci
                         System.out.print(times[i]);
                     } else {
                         System.out.print(times[i] + ", ");
@@ -61,7 +61,7 @@ public class Average5K {
                 }
             }
             System.out.println("}");
-            System.out.format("Prumerne jste 1km ubehl za %.2f min.\n", avg);
+            System.out.format("Prumerne jste 1km ubehl za %.2f min.\n", avg); //JV prumer to nepocita spravne
 
         }
     }

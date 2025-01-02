@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Jirkal;
+package jirkal;
 
 import java.util.Scanner;
 /**
@@ -35,7 +35,7 @@ public class Reputation {
            {
                 for (int j = 0; j < matice[i].length; j++)
             {
-                System.out.print(matice[i][j]);
+                System.out.print(matice[i][j]); //JV chtelo tam pouzit format 
             }
                System.out.println();
            }
@@ -82,7 +82,7 @@ public class Reputation {
             {
                 if( matice[i][j] > 0)
                 {
-                  innerpositive = true;  
+                  innerpositive = true;  //JV tu uz mohl byt break
                 }
             }
             if (!innerpositive){
@@ -118,7 +118,7 @@ public class Reputation {
             hodnoty[i][0] = min;
             hodnoty[i][1] = max;
         }
-        double hodnoty1[] = new double[matice.length];
+        double hodnoty1[] = new double[matice.length]; //JV trochu zbytecne komplikovany algoritmus
         for (int i = 0; i < hodnoty.length; i++)
         {
             double reverse = 0;

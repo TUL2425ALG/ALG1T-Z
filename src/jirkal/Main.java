@@ -2,14 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Chynchyk;
+package jirkal;
 
 /**
  *
- * @author Chynchyk-A-734b
+ * @author Jirkal-J-3ff5
  */
-public class main {
+public class Main {
+    
     public static void main(String[] args) {
         
     }
+    
 }

@@ -1,4 +1,4 @@
-package Samborskyj;
+package samborskyj;
 
 /**
  *

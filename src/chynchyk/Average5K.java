@@ -1,4 +1,4 @@
-package Chynchyk;
+package chynchyk;
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Mahdal;
+package mahdal;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -38,7 +38,7 @@ public class Reputation {
         System.out.println("Zarovnany vypis:");
         for (int i = 0; i < ratings.length; i++) {
             for (int j = 0; j < ratings.length; j++) {
-                if (ratings[i][j] < 0) {
+                if (ratings[i][j] < 0) { //JV vhodne pouzit format
                     System.out.print(" " + ratings[i][j]);
                 } else {
                     System.out.print("  " + ratings[i][j]);
@@ -90,7 +90,7 @@ public class Reputation {
             rowPositive = false;
             for (int j = 0; j < matrix.length; j++) {
                 if (matrix[i][j] > 0) {
-                    rowPositive = true;
+                    rowPositive = true; //JV mohl byt break 
                 }
             }
             if (rowPositive != true) {
@@ -110,7 +110,7 @@ public class Reputation {
             min = Integer.MAX_VALUE;
             max = -Integer.MAX_VALUE;
             for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] < min && matrix[i][j] != 0) {
+                if (matrix[i][j] < min && matrix[i][j] != 0) { //JV testovala bych na i = j, hodnocen9 samotne muze byt pravdepodobne 0 
                     min = matrix[i][j];
                 }
                 if (matrix[i][j] > max && matrix[i][j] != 0) {

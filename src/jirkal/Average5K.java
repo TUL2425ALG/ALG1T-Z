@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Jirkal;
+package jirkal;
 
 import java.util.Scanner;
 /**
@@ -51,7 +51,7 @@ public class Average5K {
 
             double prumer = 0;
             for(int i = 0; i < behy1.length; i++){
-                if (behy1[i] != min/5 && behy[i] != max){
+                if (behy1[i] != min/5 && behy[i] != max){ //JV konzistence - pro u min/5 a u max neni, raz behy, behy1
                    prumer += behy1[i];
                 }
 
@@ -65,7 +65,7 @@ public class Average5K {
    */
 
          
-            System.out.println("Použité hodnoty pro výpočet:");
+            System.out.println("Použité hodnoty pro výpočet:"); //JV vypisou se i nepouzite behy
             System.out.print("{");
             for (int i = 0; i < behy.length; i++){
                
